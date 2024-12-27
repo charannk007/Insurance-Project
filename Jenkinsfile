@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Clone the GitHub repository') {
             steps {
-                git branch: 'finance', url: 'https://github.com/charannk007/Insurance-Project.git'
+                git branch: 'insurance', url: 'https://github.com/charannk007/Insurance-Project.git'
             }
         }
 
