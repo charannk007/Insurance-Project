@@ -3,9 +3,10 @@ pipeline {
 
     environment {
         MAVEN_HOME = tool name: 'maven', type: 'maven'
-        IMAGE_NAME = 'insuranceproject'
+        IMAGE_NAME = 'insurance'
         USER_NAME = 'nkcharan'
         DOCKERHUB_CREDENTIALS = credentials('docker-creds') 
+        
       
     }
 
@@ -44,7 +45,7 @@ pipeline {
 
         stage('Creating the Image') {
             steps {
-                sh 'docker tag ${IMAGE_NAME}:v3 ${USER_NAME}/${IMAGE_NAME}:v1'
+                sh 'docker tag ${IMAGE_NAME}:v1 ${USER_NAME}/${IMAGE_NAME}:v1'
             }
         }
 
